@@ -36,8 +36,15 @@ prompt.get(prompt_options, function (err, result) {
 	// 	}
 	// });
 
-	//send power off IR cmd
-	tv.sendIrCommand('AAAAAQAAAAEAAAASAw==', function(err, res, body){
+	// var cmd = 'AAAAAgAAAJcAAAAjAw=='; //return
+	// var cmd = 'AAAAAQAAAAEAAABgAw=='; //home	
+	// var cmd = 'AAAAAQAAAAEAAAA6Aw=='; //display
+	// var cmd = 'AAAAAQAAAAEAAAAvAw=='; //power
+	// var cmd = 'AAAAAQAAAAEAAAAUAw=='; //mute
+	// var cmd = 'AAAAAQAAAAEAAAAvAw=='; //power off (no worky)
+	var cmd = 'AAAAAQAAAAEAAAA+Aw=='; // screen on/off (works)
+
+	tv.sendIrCommand(cmd, function(err, res, body){
 		if(err) return console.log(err);
 		if(body) return console.log(body);
 		console.log(res.statusCode);
