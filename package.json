@@ -13,6 +13,7 @@
   "dependencies": {
     "lodash": "~2.2.1",
     "request": "~2.27.0",
+    "wake_on_lan": "0.0.3",
     "xml2json": "~0.3.2",
     "xmlbuilder": "^2.4.4"
   },
@@ -35,7 +36,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "node ./tests/test.js"
+    "test": "node ./tests/test.js",
+    "wake": "node ./tests/wake.js"
   },
   "license": "MIT"
 }

@@ -77,4 +77,3 @@ prompt.get(prompt_options, function (err, result) {
  //    Mute		AAAAAQAAAAEAAAAUAw==
 
 });
-
