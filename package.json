@@ -1,13 +1,13 @@
 {
-  "author": "Chad Francis <discgolfer1138@gmail.com> (http://www.thechad.io)",
+  "author": "Chad Francis <yamanote1138@gmail.com> (http://www.thechad.io)",
   "name": "cers-tv",
   "description": "node client to act as remote for CERS-compatible TV",
-  "homepage": "https://github.com/discgolfer1138/node-cers-tv",
+  "homepage": "https://github.com/yamanote1138/node-cers-tv",
   "version": "0.0.1",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git://github.com/discgolfer1138/node-cers-tv.git"
+    "url": "git://github.com/yamanote1138/node-cers-tv.git"
   },
   "main": "index.js",
   "dependencies": {
@@ -30,7 +30,7 @@
     "bravia"
   ],
   "bugs": {
-    "url": "https://github.com/discgolfer1138/node-cers-tv/issues"
+    "url": "https://github.com/yamanote1138/node-cers-tv/issues"
   },
   "directories": {
     "test": "tests"
