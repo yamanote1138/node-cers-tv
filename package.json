@@ -11,11 +11,11 @@
   },
   "main": "index.js",
   "dependencies": {
-    "lodash": "~2.2.1",
-    "request": "~2.27.0",
-    "wake_on_lan": "0.0.3",
-    "xml2json": "~0.3.2",
-    "xmlbuilder": "^2.4.4"
+    "lodash": "^4.17.11",
+    "request": "^2.88.0",
+    "wake_on_lan": "^1.0.0",
+    "xml2json": "^0.11.2",
+    "xmlbuilder": "^10.1.1"
   },
   "devDependencies": {
     "prompt": "~0.2.11"
