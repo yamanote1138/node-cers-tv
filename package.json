@@ -3,7 +3,7 @@
   "name": "cers-tv",
   "description": "node client to act as remote for CERS-compatible TV",
   "homepage": "https://github.com/yamanote1138/node-cers-tv",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "private": false,
   "repository": {
     "type": "git",
