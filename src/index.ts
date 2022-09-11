@@ -92,7 +92,7 @@ class CersTVClient{
 			deviceId: `MediaRemote:${this._macAddress}`
 		};
 
-		return await this._send('GET', '/cers/api/register', JSON.stringify(data));
+		return await this._send('POST', '/cers/api/register', JSON.stringify(data));
 	}
 
 	getRemoteCommandList = async () => {
