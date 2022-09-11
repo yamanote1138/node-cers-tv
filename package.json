@@ -1,42 +1,56 @@
 {
-  "author": "Chad Francis <yamanote1138@gmail.com> (http://www.thechad.io)",
   "name": "cers-tv",
-  "description": "node client to act as remote for CERS-compatible TV",
-  "homepage": "https://github.com/yamanote1138/node-cers-tv",
   "version": "0.1.0",
+  "description": "node client to act as remote for CERS-compatible TV",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "test": "jest --no-cache --coverage"
+  },
+  "keywords": [
+    "api",
+    "bravia",
+    "cers",
+    "node",
+    "tv"
+  ],
+  "author": {
+    "email": "yamanote1138@gmail.com",
+    "name": "Chad Francis",
+    "url": "http://thechad.io"
+  },
+  "homepage": "https://github.com/yamanote1138/node-cers-tv",
   "private": false,
+  "readmeFilename": "README.md",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git://github.com/yamanote1138/node-cers-tv.git"
   },
-  "main": "index.js",
-  "dependencies": {
-    "request": "^2.88.2",
-    "wake_on_lan": "^1.0.0",
-    "xml2json": "^0.12.0",
-    "xmlbuilder": "^15.1.1"
-  },
-  "devDependencies": {
-    "prompt": "^1.0.0"
+  "bugs": {
+    "url": "https://github.com/yamanote1138/jmri-client/issues"
   },
   "engines": {
-    "node": ">=10.15.1"
+    "node": ">=14"
   },
-  "keywords": [
-    "cers",
-    "node",
-    "api",
-    "bravia"
-  ],
-  "bugs": {
-    "url": "https://github.com/yamanote1138/node-cers-tv/issues"
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "@types/node": "^18.7.14",
+    "@types/node-fetch": "^2.6.2",
+    "jest": "^28.1.3",
+    "prompt": "^1.3.0",
+    "ts-jest": "^28.0.8",
+    "typescript": "^4.8.2"
   },
-  "directories": {
-    "test": "tests"
+  "dependencies": {
+    "node-fetch": "^3.2.10",
+    "wake_on_lan": "^1.0.0",
+    "xmlbuilder2": "^3.0.2"
   },
-  "scripts": {
-    "test": "node ./tests/test.js",
-    "wake": "node ./tests/wake.js"
-  },
-  "license": "MIT"
+  "files": [
+    "dist",
+    "index.js"
+  ]
 }

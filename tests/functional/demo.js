@@ -19,3 +19,9 @@ prompt.get(prompt_options, function (err, result) {
 		}
 	});
 });
+
+tv.sendIrCommand(cmd, function(err, res, body){
+	if(err) return console.log(err);
+	if(body) return console.log(body);
+	console.log(res.statusCode);
+});
