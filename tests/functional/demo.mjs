@@ -1,6 +1,6 @@
 import prompt from 'prompt';
-import { wake } from 'wake_on_lan';
-import { CersTVClient } from '../../dist/index.js';
+// import { wake } from 'wake_on_lan';
+import { CersTVClient, Command } from '../../dist/index.js';
 
 const functionalTest = async () => {
 	prompt.start();
@@ -20,6 +20,7 @@ const functionalTest = async () => {
 
 	console.log(`host set to ${host}`);
 	console.log(`mac address set to ${macAddress}`);
+	console.log(`power command is: ${Command.Power}`);
 
 	const tv = new CersTVClient(host, '11:38:11:38:11:38', 'node cers client');
 
@@ -38,11 +39,9 @@ const functionalTest = async () => {
 	// });
 
 
-	// tv.sendIrCommand(cmd, function(err, res, body){
-	// 	if(err) return console.log(err);
-	// 	if(body) return console.log(body);
-	// 	console.log(res.statusCode);
-	// });
+	tv.sendIrCommand(Command.Power).then((res) => {
+		console.log(res);
+	});
 };
 
 functionalTest();

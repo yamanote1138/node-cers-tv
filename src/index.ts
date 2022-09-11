@@ -101,12 +101,12 @@ class CersTVClient{
 
 	sendIrCommand = async (cmdCode:Command) => {
 
-		const xml = create('s:Envelope')
+		const xml = create().ele('s:Envelope')
 			.att('xmlns:s', 'http://schemas.xmlsoap.org/soap/envelope/')
 			.att('s:encodingStyle', 'http://schemas.xmlsoap.org/soap/encoding/')
 			.ele('s:Body')
 			.ele('u:X_SendIRCC', {'xmlns:u': 'urn:schemas-sony-com:service:IRCC:1'})
-			.ele('IRCCCode', cmdCode)
+			.ele('IRCCCode').txt(cmdCode)
 			.end({ prettyPrint: true });
 
 		console.log(xml);
@@ -129,4 +129,4 @@ class CersTVClient{
 };
 
 
-export { CersTVClient };
+export { CersTVClient, Command };
