@@ -1,5 +1,3 @@
-// jest.mock("xmlbuilder2");
-
 import { CersTVClient } from '../../src/index'
 
 describe('Constructor', () => {
