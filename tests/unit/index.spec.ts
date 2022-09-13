@@ -1,5 +1,4 @@
-jest.mock("node-fetch");
-jest.mock("xmlbuilder2");
+// jest.mock("xmlbuilder2");
 
 import { CersTVClient } from '../../src/index'
 

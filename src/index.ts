@@ -1,8 +1,7 @@
 'use strict';
 
-import fetch from "node-fetch";
-import { RequestInit } from "node-fetch";
 import { create } from "xmlbuilder2";
+import axios, { AxiosRequestConfig } from "axios";
 
 type Protocol = 'http' | 'https';
 
@@ -68,21 +67,22 @@ class CersTVClient{
   };
 
 	protected _send = async (method:string, path:string, data?:string) => {
-    const uri = `${this._protocol}://${this._host}:${this._port}/${path}`;
-    const options:RequestInit = {
-      method: method
-    }
-		if(data !== undefined) options.body = data;
+		const config:AxiosRequestConfig = {
+			url: `${this._protocol}://${this._host}:${this._port}/${path}`
+		}
+		config.method = method;
 
-		options.headers = [
-			['Content-Type','application/json; charset=utf-8'],
-			['User-Agent','MediaRemote/3.0.1 CFNetwork/548.0.4 Darwin/11.0.0'],
-			['X-CERS-DEVICE-INFO','iPhone OS5.0.1/3.0.1/iPhone3,3'],
-			['X-CERS-DEVICE-ID',`MediaRemote:${this._macAddress}`],
-			['Connection','close']
-		];
+		if(data !== undefined) config.data = data;
 
-    return await fetch(uri, options);
+		config.headers = {
+			'Content-Type':'application/json; charset=utf-8',
+			'User-Agent':'MediaRemote/3.0.1 CFNetwork/548.0.4 Darwin/11.0.0',
+			'X-CERS-DEVICE-INFO':'iPhone OS5.0.1/3.0.1/iPhone3,3',
+			'X-CERS-DEVICE-ID':`MediaRemote:${this._macAddress}`,
+			'Connection':'close'
+		};
+
+		return await axios.request(config);
   }
 
 	register = async () => {

@@ -5,7 +5,7 @@ import { CersTVClient, Command } from '../../dist/index.js';
 const functionalTest = async () => {
 	prompt.start();
 
-	var prompt_options = [
+	const prompt_options = [
 		{
 			'name':'host',
 			'default':'192.168.1.23'
