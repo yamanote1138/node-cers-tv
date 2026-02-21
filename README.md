@@ -1,4 +1,8 @@
-cers-tv 
+> [!WARNING]
+> **DEPRECATED — No longer maintained.**
+> This package is no longer actively developed or supported. No further updates, bug fixes, or security patches will be issued. It is kept available for reference and for anyone who may find the source code useful. Use at your own risk.
+
+cers-tv
 [![Build](https://github.com/yamanote1138/node-cers-tv/actions/workflows/build-and-test.yml/badge.svg?branch=main)](https://github.com/yamanote1138/node-cers-tv/actions/workflows/build-and-test.yml)
 ![License](https://img.shields.io/npm/l/cers-tv)
 ![NPM Version](https://img.shields.io/npm/v/cers-tv)
